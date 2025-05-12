@@ -4,9 +4,6 @@ using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using STU.Copilot.Infrastructure.Helpers;
-using STU.Copilot.Infrastructure.Interfaces;
-using STU.Copilot.Infrastructure.Models.Chat;
-using STU.Copilot.Infrastructure.Models.Configuration;
 
 namespace STU.Copilot.Infrastructure.Services;
 

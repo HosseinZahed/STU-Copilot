@@ -1,6 +1,4 @@
-﻿using STU.Copilot.Infrastructure.Models.Chat;
-
-namespace STU.Copilot.Infrastructure.Interfaces;
+﻿namespace STU.Copilot.Infrastructure.Interfaces;
 
 public interface ICosmosDBService
 {

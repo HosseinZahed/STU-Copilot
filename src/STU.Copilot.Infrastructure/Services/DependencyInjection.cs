@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using STU.Copilot.Infrastructure.Interfaces;
-using STU.Copilot.Infrastructure.Models.Configuration;
 
 namespace STU.Copilot.Infrastructure.Services;
 

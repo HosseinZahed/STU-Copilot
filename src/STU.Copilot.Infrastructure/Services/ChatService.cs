@@ -1,7 +1,4 @@
-﻿using STU.Copilot.Infrastructure.Interfaces;
-using STU.Copilot.Infrastructure.Models.Chat;
-
-namespace STU.Copilot.Infrastructure.Services;
+﻿namespace STU.Copilot.Infrastructure.Services;
 
 internal class ChatService : IChatService
 {
