@@ -23,16 +23,7 @@ public static class PartitionManager
         return partitionKey;
     }
 
-    public static PartitionKey GetAccountsDataFullPK(string tenantId, string accountId)
-    {
-        var partitionKey = new PartitionKeyBuilder()
-            .Add(tenantId)
-            .Add(accountId)
-            .Build();
-        return partitionKey;
-    }
-
-    public static PartitionKey GetAccountsPartialPK(string tenantId)
+    public static PartitionKey GetTenantPartialPK(string tenantId)
     {
         var partitionKey = new PartitionKeyBuilder()
             .Add(tenantId)
