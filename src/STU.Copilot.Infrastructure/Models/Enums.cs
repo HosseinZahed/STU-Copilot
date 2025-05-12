@@ -1,4 +1,4 @@
-﻿namespace STU.Copilot.AI.Models;
+﻿namespace STU.Copilot.Infrastructure.Models;
 
 internal enum AgentType
 {

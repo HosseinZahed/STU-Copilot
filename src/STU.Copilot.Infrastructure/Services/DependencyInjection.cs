@@ -1,8 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using STU.Copilot.AI.Models.Configuration;
+using STU.Copilot.Infrastructure.Interfaces;
+using STU.Copilot.Infrastructure.Models.Configuration;
 
-namespace STU.Copilot.AI.Services;
+namespace STU.Copilot.Infrastructure.Services;
 
 public static partial class DependencyInjection
 {

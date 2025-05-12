@@ -1,6 +1,6 @@
 ﻿using Microsoft.Azure.Cosmos;
 
-namespace STU.Copilot.AI.Helpers;
+namespace STU.Copilot.Infrastructure.Helpers;
 
 public static class PartitionManager
 {

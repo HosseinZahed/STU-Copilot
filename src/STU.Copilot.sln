@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STU.Copilot.Web", "STU.Copi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STU.Copilot.Tests", "STU.Copilot.Tests\STU.Copilot.Tests.csproj", "{01FDEC68-FB8D-4EB9-FF0A-0F9B0C5D945C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STU.Copilot.AI", "STU.Copilot.AI\STU.Copilot.AI.csproj", "{9C2B7B67-51A3-49FE-9D02-ACED0EAA3AEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STU.Copilot.Infrastructure", "STU.Copilot.Infrastructure\STU.Copilot.Infrastructure.csproj", "{D172E564-12C3-4E6C-A4D8-582A7FE2F2D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +40,10 @@ Global
 		{01FDEC68-FB8D-4EB9-FF0A-0F9B0C5D945C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01FDEC68-FB8D-4EB9-FF0A-0F9B0C5D945C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01FDEC68-FB8D-4EB9-FF0A-0F9B0C5D945C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C2B7B67-51A3-49FE-9D02-ACED0EAA3AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C2B7B67-51A3-49FE-9D02-ACED0EAA3AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C2B7B67-51A3-49FE-9D02-ACED0EAA3AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C2B7B67-51A3-49FE-9D02-ACED0EAA3AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D172E564-12C3-4E6C-A4D8-582A7FE2F2D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D172E564-12C3-4E6C-A4D8-582A7FE2F2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D172E564-12C3-4E6C-A4D8-582A7FE2F2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D172E564-12C3-4E6C-A4D8-582A7FE2F2D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 ﻿using Microsoft.SemanticKernel.ChatCompletion;
 
-namespace STU.Copilot.AI.Helpers;
+namespace STU.Copilot.Infrastructure.Helpers;
 
 internal static class AuthorRoleHelper
 {

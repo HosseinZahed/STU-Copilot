@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using Microsoft.SemanticKernel;
 
-namespace STU.Copilot.AI.Tools;
+namespace STU.Copilot.Infrastructure.Tools;
 
 internal class CurrentDateTimePlugin
 {

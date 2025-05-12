@@ -3,9 +3,12 @@ using Microsoft.Azure.Cosmos;
 using Microsoft.Azure.Cosmos.Fluent;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using STU.Copilot.AI.Helpers;
+using STU.Copilot.Infrastructure.Helpers;
+using STU.Copilot.Infrastructure.Interfaces;
+using STU.Copilot.Infrastructure.Models.Chat;
+using STU.Copilot.Infrastructure.Models.Configuration;
 
-namespace STU.Copilot.AI.Services;
+namespace STU.Copilot.Infrastructure.Services;
 
 public class CosmosDBService : ICosmosDBService
 {

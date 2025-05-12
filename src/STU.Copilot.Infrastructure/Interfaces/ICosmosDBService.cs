@@ -1,4 +1,6 @@
-﻿namespace STU.Copilot.AI.Interfaces;
+﻿using STU.Copilot.Infrastructure.Models.Chat;
+
+namespace STU.Copilot.Infrastructure.Interfaces;
 
 public interface ICosmosDBService
 {
