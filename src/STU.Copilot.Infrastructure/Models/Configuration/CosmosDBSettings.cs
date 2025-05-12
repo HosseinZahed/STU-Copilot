@@ -1,6 +1,4 @@
-﻿using Microsoft.Azure.Cosmos;
-
-namespace STU.Copilot.Infrastructure.Models.Configuration;
+﻿namespace STU.Copilot.Infrastructure.Models;
 
 public record CosmosDBSettings
 {

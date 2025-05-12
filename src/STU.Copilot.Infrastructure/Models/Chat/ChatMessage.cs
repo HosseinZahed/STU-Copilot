@@ -1,4 +1,4 @@
-﻿namespace STU.Copilot.Infrastructure.Models.Chat;
+﻿namespace STU.Copilot.Infrastructure.Models;
 public record ChatMessage
 {
     /// <summary>

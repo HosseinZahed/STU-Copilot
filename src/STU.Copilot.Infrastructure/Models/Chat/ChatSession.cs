@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace STU.Copilot.Infrastructure.Models.Chat;
+namespace STU.Copilot.Infrastructure.Models;
 public record ChatSession
 {
     /// <summary>

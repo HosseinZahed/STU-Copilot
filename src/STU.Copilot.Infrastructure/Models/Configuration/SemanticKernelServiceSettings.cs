@@ -1,4 +1,4 @@
-﻿namespace STU.Copilot.Infrastructure.Models.Configuration;
+﻿namespace STU.Copilot.Infrastructure.Models;
 public record SemanticKernelServiceSettings
 {
     public required AzureOpenAISettings AzureOpenAISettings { get; init; }

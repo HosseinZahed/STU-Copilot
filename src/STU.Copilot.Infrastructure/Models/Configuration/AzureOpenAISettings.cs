@@ -1,4 +1,4 @@
-﻿namespace STU.Copilot.Infrastructure.Models.Configuration;
+﻿namespace STU.Copilot.Infrastructure.Models;
 public record AzureOpenAISettings
 {
     public required string ChatDeploymentName { get; set; }
