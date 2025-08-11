@@ -156,12 +156,10 @@ class ChatService:
     def select_responder_agent(self,
                                agents: dict[str, ChatCompletionAgent],
                                current_message: cl.Message,
-                               chat_history: ChatHistory,
                                latest_agent_name: str) -> ChatCompletionAgent:
         """Select the appropriate agent based on the current message and chat history."""
 
-        print(f"Current message command: {current_message.command}")
-        print(f"Chat history length: {len(chat_history)}")
+        print(f"Current message command: {current_message.command}")        
         print(f"Latest agent in use: {latest_agent_name}")
 
         # If the current message is a command, use the corresponding agent

@@ -4,7 +4,6 @@ Hello and welcome! 👋 I'm STU Copilot, your intelligent assistant from Microso
 
 🔧 **Technical Guidance** - Architecture designs, solution engineering, and Azure best practices  
 💼 **Sales Support** - Product information, competitive insights, and customer engagement strategies  
-🏢 **Industry Insights** - Sector-specific solutions and market intelligence  
 📚 **Microsoft Solutions** - Comprehensive guidance on Azure, Microsoft 365, Power Platform, and more
 
 Whether you're a Technical Specialist, Solution Architect, Sales Professional, or need support with Microsoft technologies, I'm equipped with specialized agents to provide you with accurate, up-to-date information and actionable insights.
@@ -41,9 +40,6 @@ Dedicated to searching AWS documentation when you need information about Amazon 
 - Searches official AWS documentation
 - Provides properly formatted results with links
 - Useful for hybrid cloud scenarios or migration discussions
-
-### 💰 **Azure Pricing Agent**
-Helps with Azure cost estimation and pricing information (currently in development).
 
 ### 🔍 **Bing Search Agent**
 Performs web searches to find information not covered by specialized documentation agents:
@@ -99,12 +95,6 @@ Clarifies user requests by asking targeted questions, focusing on:
 - Azure, AI Foundry, Copilot Studio
 - Microsoft 365, Dynamics 365, Power Platform
 - Development tools like Visual Studio, GitHub, .NET
-
-### 📊 **Seismic Agent**
-Searches for sales and marketing materials:
-- Presentation materials
-- Sales resources
-- Marketing content with solution areas and confidentiality levels
 
 ### 📄 **Summarizer Agent**
 Creates concise summaries of chat conversations:
