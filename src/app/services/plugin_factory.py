@@ -7,7 +7,12 @@ from azure.identity.aio import DefaultAzureCredential
 from semantic_kernel.agents import AzureAIAgent
 import chainlit as cl
 from .cosmos_db_service import cosmos_db_service
+from .storage_account_service import storage_account_service
+import requests
+import io
+import base64
 import json
+import uuid
 
 # Environment variables for AI Foundry project endpoint and agent IDs
 ai_foundry_project_endpoint = os.getenv("AI_FOUNDRY_PROJECT_ENDPOINT")
@@ -25,6 +30,10 @@ if not github_docs_search_agent_id:
     raise EnvironmentError(
         "GITHUB_DOCS_SEARCH_AGENT_ID environment variable is not set.")
 
+mermaid_ink_endpoint = os.getenv("MERMAID_INK_ENDPOINT")
+if not mermaid_ink_endpoint:
+    raise EnvironmentError(
+        "MERMAID_INK_ENDPOINT environment variable is not set.")
 
 class GitHubPlugin:
     """A plugin to search GitHub repositories."""
@@ -206,6 +215,29 @@ class AWSDocsPlugin:
                     })
         # <-- context manager closes here, after all items are buffered
         return json.dumps(contents, indent=2)
+
+
+class ArchitectPlugin:
+    """A plugin to assist architects with design and architecture tasks."""
+
+    @kernel_function(name="mermaid_diagram_to_image",
+                     description="Convert a Mermaid diagram definition to an image.")
+    @cl.step(type="tool", name="Mermaid Diagram Generator")
+    async def mermaid_diagram_to_image(graph_definition: str) -> str:
+        """Convert a Mermaid diagram definition to an image."""
+        graph_bytes = graph_definition.encode('utf-8')
+        base64_bytes = base64.urlsafe_b64encode(graph_bytes)
+        base64_string = base64_bytes.decode('ascii')
+        graph_image = io.BytesIO(requests.get(f'{mermaid_ink_endpoint}/img' + base64_string).content)
+        # Save image to storage account
+        blob_name = f"{uuid.uuid4()}.png"
+        storage_account_service.upload_blob(
+            container_name="chat-files",
+            blob_name=blob_name,
+            data=graph_image.getvalue(),
+            overwrite=True
+        )
+        return blob_name
 
 
 @asynccontextmanager

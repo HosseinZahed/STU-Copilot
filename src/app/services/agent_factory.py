@@ -43,6 +43,7 @@ class AgentFactory:
             "summarizer_agent": self.get_summarizer_agent(),
             "aws_docs_agent": self.get_aws_docs_agent(),
             "explainer_agent": self.get_explainer_agent(),
+            "mermaid_generator_agent": self.mermaid_generator_agent()
         }
         self.agents["orchestrator_agent"] = self.get_orchestrator_agent()
 
@@ -108,7 +109,7 @@ class AgentFactory:
     def get_questioner_agent(self) -> ChatCompletionAgent:
         """Create a questioner agent with the necessary plugins."""
         agent_name = "questioner_agent"
-        model_name = "gpt-5-nano"
+        model_name = "gpt-5-mini"
 
         # Clone the base kernel and add the OpenAI service
         kernel = self.create_kernel(
@@ -303,7 +304,7 @@ class AgentFactory:
     def get_architect_agent(self) -> ChatCompletionAgent:
         """Create an architect agent with the necessary plugins."""
         agent_name = "architect_agent"
-        model_name = "o3-mini"
+        model_name = "gpt-5-chat"
 
         # Clone the base kernel and add the OpenAI service
         kernel = self.create_kernel(
@@ -327,7 +328,7 @@ class AgentFactory:
     def get_summarizer_agent(self) -> ChatCompletionAgent:
         """Create a summarizer agent with the necessary plugins."""
         agent_name = "summarizer_agent"
-        model_name = "gpt-5-mini"
+        model_name = "gpt-5-nano"
 
         # Clone the base kernel and add the OpenAI service
         kernel = self.create_kernel(
@@ -365,6 +366,28 @@ class AgentFactory:
         )
 
         return explainer_agent
+
+    def mermaid_generator_agent(self) -> ChatCompletionAgent:
+        """Create a Mermaid generator agent."""
+        agent_name = "mermaid_generator_agent"
+        model_name = "gpt-5-chat"
+
+        # Clone the base kernel and add the OpenAI service
+        kernel = self.create_kernel(
+            agent_name=agent_name,
+            model_name=model_name
+        )
+
+        # Create the agent
+        mermaid_agent = ChatCompletionAgent(
+            kernel=kernel,
+            name=agent_name,
+            description="Mermaid diagram generation agent.",
+            instructions=cache_service.load_prompt(agent_name),
+            # plugins=[self.mermaid_plugin()]
+        )
+
+        return mermaid_agent
 
     @staticmethod
     def execution_settings() -> OpenAIChatPromptExecutionSettings:

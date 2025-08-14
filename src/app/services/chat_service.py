@@ -2,7 +2,6 @@ import chainlit as cl
 from typing import Optional, List
 from chainlit.types import CommandDict
 from semantic_kernel.agents import ChatCompletionAgent
-from semantic_kernel.contents import ChatHistory
 from .agent_factory import agent_factory
 
 
@@ -108,6 +107,18 @@ class ChatService:
                 "command": "Explainer",
                 "action_name": "action_button",
                 "agent_object": agents.get("explainer_agent")
+            },
+            "mermaid_generator_agent": {
+                "title": "Mermaid Generator",
+                "description": "Generate Mermaid diagrams from text",
+                "icon": "shapes",
+                "is_button": False,
+                "is_persistent": False,
+                "is_command": True,
+                "is_action": True,
+                "command": "Mermaid Generator",
+                "action_name": "action_button",
+                "agent_object": agents.get("mermaid_generator_agent")
             }
         }
 
@@ -159,7 +170,7 @@ class ChatService:
                                latest_agent_name: str) -> ChatCompletionAgent:
         """Select the appropriate agent based on the current message and chat history."""
 
-        print(f"Current message command: {current_message.command}")        
+        print(f"Current message command: {current_message.command}")
         print(f"Latest agent in use: {latest_agent_name}")
 
         # If the current message is a command, use the corresponding agent
